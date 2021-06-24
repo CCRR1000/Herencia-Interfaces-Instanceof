@@ -2,6 +2,6 @@ package src.interfaces;
 
 public interface Aceleracion {
     
-    public abstract void acelerar();
+    public abstract String acelerar();
 
 }
