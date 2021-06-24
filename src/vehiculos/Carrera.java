@@ -5,10 +5,12 @@ import src.interfaces.*;
 public class Carrera extends Vehiculo implements MovimientoLados, Aceleracion {
 
     public Carrera() {
+        super.cantPasajeros=1;
+        super.esGasolina=true;
     }
  
-    public Carrera(int cantGalones, int cantPasajeros, int velocidadMaxima, double aceleracion, boolean esGasolina) {
-        super(cantGalones, cantPasajeros, velocidadMaxima, aceleracion, esGasolina);
+    public Carrera(int cantGalones, int velocidadMaxima, double aceleracion) {
+        super(cantGalones, 1, velocidadMaxima, aceleracion, true);
     }
 
     @Override
@@ -30,7 +32,7 @@ public class Carrera extends Vehiculo implements MovimientoLados, Aceleracion {
     }
 
     @Override
-    public double getAceleracion() {
+    public double getAceleracionBase() {
         return 3 * super.aceleracionBase;
     }
 

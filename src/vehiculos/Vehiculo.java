@@ -55,11 +55,11 @@ public abstract class Vehiculo {
         this.velocidadMaxima = velocidadMaxima;
     }
 
-    public double getAceleracion() {
+    public double getAceleracionBase() {
         return aceleracionBase;
     }
 
-    public void setAceleracion(double aceleracion) {
+    public void setAceleracionBase(double aceleracion) {
         this.aceleracionBase = aceleracion;
     }
 

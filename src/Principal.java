@@ -32,9 +32,8 @@ public class Principal {
             System.out.println("\n\n  VEHICULOS");
             System.out.println("\n  MENU:");
             System.out.println("\n  1. Mostrar Autos");
-            System.out.println("  2. Mover Autos");
-            System.out.println("  3. Ver Autos por Tipo Especifico");
-            System.out.println("  4. Salir");
+            System.out.println("  2. Ver Autos por Tipo Especifico");
+            System.out.println("  3. Salir");
             System.out.print("\n  Escriba el numero de la opcion: ");
             int opcion = Integer.parseInt(scan.nextLine());
 
@@ -43,12 +42,9 @@ public class Principal {
                     menu.imprimirAutos(autos);
                     break;
                 case 2:
-                    menu.moverAutos(autos);
-                    break;
-                case 3:
                     menu.submenuTipoEspecifico(autos);
                     break;
-                case 4:
+                case 3:
                     System.out.println("\n    Presentacion de vehiculos finalizada\n");
                     salir = true;
                     break;

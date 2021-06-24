@@ -5,16 +5,16 @@ import java.util.Scanner;
 import src.vehiculos.*;
 
 public class Menu {
-    
+
     private Scanner scan = new Scanner(System.in);
 
     public void submenuTipoEspecifico(Vehiculo[] autos) {
 
         System.out.println("\n  Elija el tipo de vehiculos que desea ver: ");
-        System.out.println(  "    1. Camioneta");
-        System.out.println(  "    2. Vehiculo de Carga");
-        System.out.println(  "    3. Auto de Carrera");
-        System.out.print(  "\n  Escriba el numero de la opcion: ");
+        System.out.println("    1. Camioneta");
+        System.out.println("    2. Vehiculo de Carga");
+        System.out.println("    3. Auto de Carrera");
+        System.out.print("\n  Escriba el numero de la opcion: ");
         int opcion = Integer.parseInt(scan.nextLine());
 
         switch (opcion) {
@@ -41,15 +41,15 @@ public class Menu {
 
         for (int i = 0; i < autos.length; i++) {
 
-            if (tipo==1 && autos[i] instanceof Camioneta) {
+            if (tipo == 1 && autos[i] instanceof Camioneta) {
                 System.out.print("\n\n  Vehiculo No. " + (i + 1));
                 System.out.println(autos[i].toString());
 
-            } else if (tipo==2 && autos[i] instanceof Carga){
+            } else if (tipo == 2 && autos[i] instanceof Carga) {
                 System.out.print("\n\n  Vehiculo No. " + (i + 1));
                 System.out.println(autos[i].toString());
 
-            } else if (tipo==3 && autos[i] instanceof Carrera){
+            } else if (tipo == 3 && autos[i] instanceof Carrera) {
                 System.out.print("\n\n  Vehiculo No. " + (i + 1));
                 System.out.println(autos[i].toString());
             }
@@ -69,9 +69,6 @@ public class Menu {
 
     }
 
-    public void moverAutos(Vehiculo[] autos) {
-        
-    }
 
     public void imprimirAutos(Vehiculo[] autos) {
 
@@ -81,5 +78,5 @@ public class Menu {
 
         }
     }
-    
+
 }

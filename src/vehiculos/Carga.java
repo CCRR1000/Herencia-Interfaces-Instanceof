@@ -5,10 +5,12 @@ import src.interfaces.*;
 public class Carga extends Vehiculo implements MovimientoLados, Transporte, Aceleracion {
 
     public Carga() {
+        super.cantPasajeros=2;
+        super.esGasolina=false;
     }
     
-    public Carga(int cantGalones, int cantPasajeros, int velocidadMaxima, double aceleracion, boolean esGasolina) {
-        super(cantGalones, cantPasajeros, velocidadMaxima, aceleracion, esGasolina);
+    public Carga(int cantGalones, int velocidadMaxima, double aceleracion) {
+        super(cantGalones, 2, velocidadMaxima, aceleracion, false);
     }
 
     @Override

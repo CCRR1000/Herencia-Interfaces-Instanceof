@@ -5,10 +5,12 @@ import src.interfaces.*;
 public class Camioneta extends Vehiculo implements MovimientoLados, Transporte, Aceleracion {
 
     public Camioneta() {
+        super.cantPasajeros=40;
+        super.esGasolina=false;
     }
 
-    public Camioneta(int cantGalones, int cantPasajeros, int velocidadMaxima, double aceleracion, boolean esGasolina) {
-        super(cantGalones, cantPasajeros, velocidadMaxima, aceleracion, esGasolina);
+    public Camioneta(int cantGalones, int velocidadMaxima, double aceleracion) {
+        super(cantGalones, 40, velocidadMaxima, aceleracion, false);
     }
 
     @Override
