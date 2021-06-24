@@ -13,25 +13,31 @@ public class Carrera extends Vehiculo implements MovimientoLados, Aceleracion {
 
     @Override
     public void irHaciaDerecha() {
-        System.out.println("\n  Voy hacia la derecha");
+        System.out.println("\n  El vehiculo giro hacia la derecha");
         
     }
 
     @Override
     public void irHaciaIzquierda() {
-        System.out.println("\n  Voy hacia la izquierda");
+        System.out.println("\n  El vehiculo giro hacia la izquierda");
         
     }
 
     @Override
-    public void acelerar() {
-        System.out.println("\n  Mi aceleracion es el triple de la aceleracion base");
+    public String acelerar() {
+        return ("\n  Tiene turbo y puede triplicar la aceleracion base");
         
     }
 
     @Override
     public double getAceleracion() {
         return 3 * super.aceleracionBase;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\n  Descripcion: " + acelerar();
+        
     }
    
     
