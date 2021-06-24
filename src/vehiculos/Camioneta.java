@@ -24,14 +24,20 @@ public class Camioneta extends Vehiculo implements MovimientoLados, Transporte, 
     }
 
     @Override
-    public void transportacion() {
-        System.out.println("\n  Transporto personas");
+    public String transportacion() {
+        return "\n  Permite transportar personas";
         
     }
 
     @Override
-    public void acelerar() {
-        System.out.println("\n  Mi aceleracion normal");
+    public String acelerar() {
+        return "\n  Su aceleracion es normal";
+        
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\n Descripcion: " + transportacion() + acelerar();
         
     }
 
