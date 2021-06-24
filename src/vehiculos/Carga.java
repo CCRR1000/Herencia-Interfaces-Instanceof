@@ -24,15 +24,20 @@ public class Carga extends Vehiculo implements MovimientoLados, Transporte, Acel
     }
 
     @Override
-    public void transportacion() {
-        System.out.println("\n  Transporto materiales");
+    public String transportacion() {
+        return ("\n  Permite transportar materiales");
         
     }
 
     @Override
-    public void acelerar() {
-        System.out.println("\n  Mi aceleracion baja");
+    public String acelerar() {
+        return ("\n  Su aceleracion es baja");
         
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "\n  Descripcion: " + transportacion() + acelerar();
+        
+    }
 }
