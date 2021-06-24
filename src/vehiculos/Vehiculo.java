@@ -19,8 +19,8 @@ public abstract class Vehiculo {
 
     @Override
     public String toString() {
-        return "\n  Aceleracion Base: " + aceleracionBase + ",\n  Cantidad de Galones: " + cantGalones + ",\n  Cantidad de Pasajeros: "
-                + cantPasajeros + ",\n  Combustible: " + getCombustible(esGasolina) + ",\n  Velocidad Maxima: " + velocidadMaxima;
+        return "\n\n   Aceleracion Base: " + aceleracionBase + ",\n   Cantidad de Galones: " + cantGalones + ",\n   Cantidad de Pasajeros: "
+                + cantPasajeros + ",\n   Combustible: " + getCombustible(esGasolina) + ",\n   Velocidad Maxima: " + velocidadMaxima;
     }
 
     public String getCombustible(boolean esGasolina) {

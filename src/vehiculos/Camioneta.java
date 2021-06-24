@@ -13,31 +13,31 @@ public class Camioneta extends Vehiculo implements MovimientoLados, Transporte, 
 
     @Override
     public void irHaciaDerecha() {
-        System.out.println("\n  Voy hacia la derecha");
+        System.out.println("\n    El vehiculo giro hacia la derecha");
         
     }
 
     @Override
     public void irHaciaIzquierda() {
-        System.out.println("\n  Voy hacia la izquierda");
+        System.out.println("\n    El vehiculo giro hacia la izquierda");
         
     }
 
     @Override
     public String transportacion() {
-        return "\n  Permite transportar personas";
+        return "\n      - Permite transportar personas";
         
     }
 
     @Override
     public String acelerar() {
-        return "\n  Su aceleracion es normal";
+        return "\n      - Su aceleracion es normal";
         
     }
 
     @Override
     public String toString() {
-        return super.toString() + "\n Descripcion: " + transportacion() + acelerar();
+        return super.toString() + "\n\n    * Descripcion: " + transportacion() + acelerar();
         
     }
 

@@ -29,8 +29,8 @@ public class Principal {
         System.out.println("\n\n  VEHICULOS");
         System.out.println("\n  MENU:");
         System.out.println("\n  1. Mostrar Autos");
-        System.out.println("  2. Mover Autos");
-        System.out.println("  3. Ver Autos por Categoria Especifica");
+        System.out.println(  "  2. Mover Autos");
+        System.out.println(  "  3. Ver Autos por Categoria Especifica");
         int opcion = Integer.parseInt(scan.nextLine());
 
         switch (opcion) {
@@ -56,11 +56,11 @@ public class Principal {
     public String tipoInstancia(Vehiculo auto) {
 
         if (auto instanceof Camioneta) {
-            return "es una CAMIONETA";
+            return "CAMIONETA";
         } else if (auto instanceof Carga) {
-            return "es un vehiculo de CARGA";
+            return "Vehiculo de CARGA";
         } else {
-            return "es un auto de CARRERAS";
+            return "Auto de CARRERAS";
         }
 
     }
@@ -68,7 +68,7 @@ public class Principal {
     public void imprimirAutos(Vehiculo[] autos) {
 
         for (int i = 0; i < autos.length; i++) {
-            System.out.print("\n  Auto " + (i + 1) + " - " + tipoInstancia(autos[i]));
+            System.out.print("\n\n  Vehiculo " + (i + 1) + " - Tipo: " + tipoInstancia(autos[i]));
             System.out.println(autos[i].toString());
 
         }
