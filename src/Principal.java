@@ -13,6 +13,7 @@ public class Principal {
     }
 
     private Scanner scan = new Scanner(System.in);
+    private Menu menu = new Menu();
 
     Vehiculo[] autos = { new Carga(), new Carga(), new Carga(), new Carga(), new Carga(), new Carga(), new Carrera(),
             new Carrera(), new Carrera(), new Carrera(), new Carrera(), new Carrera(), new Camioneta(), new Camioneta(),
@@ -20,58 +21,43 @@ public class Principal {
 
     public Principal() {
 
-        imprimirAutos(autos);
+        iniciarMenu();
 
     }
 
     public void iniciarMenu() {
 
-        System.out.println("\n\n  VEHICULOS");
-        System.out.println("\n  MENU:");
-        System.out.println("\n  1. Mostrar Autos");
-        System.out.println(  "  2. Mover Autos");
-        System.out.println(  "  3. Ver Autos por Categoria Especifica");
-        int opcion = Integer.parseInt(scan.nextLine());
+        boolean salir = false;
+        do {
+            System.out.println("\n\n  VEHICULOS");
+            System.out.println("\n  MENU:");
+            System.out.println("\n  1. Mostrar Autos");
+            System.out.println("  2. Mover Autos");
+            System.out.println("  3. Ver Autos por Tipo Especifico");
+            System.out.println("  4. Salir");
+            System.out.print("\n  Escriba el numero de la opcion: ");
+            int opcion = Integer.parseInt(scan.nextLine());
 
-        switch (opcion) {
-            case 1:
-                imprimirAutos(autos);
-                break;
-            case 2:
-                // moverAutos(autos);
-                break;
-            case 3:
-                // ver por categoria Autos(autos);
-                break;
-            case 4:
-                System.out.println("\n  Presentacion finalizada");
-                break;
-            default:
-                System.out.println("\n  Opcion incorrecta.");
-                break;
-        }
+            switch (opcion) {
+                case 1:
+                    menu.imprimirAutos(autos);
+                    break;
+                case 2:
+                    menu.moverAutos(autos);
+                    break;
+                case 3:
+                    menu.submenuTipoEspecifico(autos);
+                    break;
+                case 4:
+                    System.out.println("\n    Presentacion de vehiculos finalizada\n");
+                    salir = true;
+                    break;
+                default:
+                    System.out.println("\n    Opcion incorrecta.\n");
+                    break;
+            }
+        } while (!salir);
 
-    }
-
-    public String tipoInstancia(Vehiculo auto) {
-
-        if (auto instanceof Camioneta) {
-            return "CAMIONETA";
-        } else if (auto instanceof Carga) {
-            return "Vehiculo de CARGA";
-        } else {
-            return "Auto de CARRERAS";
-        }
-
-    }
-
-    public void imprimirAutos(Vehiculo[] autos) {
-
-        for (int i = 0; i < autos.length; i++) {
-            System.out.print("\n\n  Vehiculo " + (i + 1) + " - Tipo: " + tipoInstancia(autos[i]));
-            System.out.println(autos[i].toString());
-
-        }
     }
 
 }
